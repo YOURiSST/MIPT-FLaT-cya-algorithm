@@ -3,3 +3,4 @@ cmake-build-debug
 test.cpp
 feels_like_working_cua_algorithm.cpp
 test_input
+a.out
