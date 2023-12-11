@@ -370,12 +370,6 @@ bool grammar::CYASolver::Predict(const std::string& to_predict) {
                                                       to_predict.size(),
                                                       std::vector<int>(
                                                           to_predict.size() + 1, 0)));
-    std::vector<std::vector<std::vector<std::pair<Rule, Rule>>>> pred(cnt,
-                                                  std::vector<std::vector<std::pair<Rule,Rule>>>(
-                                                      to_predict.size(),
-                                                      std::vector<std::pair<Rule, Rule>>(
-                                                          to_predict.size() + 1, {Rule{}, Rule{}})));
-
     for (int i = 0; i < to_predict.size(); ++i) {
         for (auto& rule : grammar.GetRules()) {
             if (rule.GetStrProduct().size() == 1 && Reader::IsTerminal(rule.GetStrProduct()[0]) &&
