@@ -1,0 +1,5 @@
+cmake-build-debug
+.idea
+test.cpp
+feels_like_working_cua_algorithm.cpp
+test_input
